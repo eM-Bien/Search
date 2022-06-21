@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffcfdf;
+  background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+}
+
+.search-wrapper {
+  width: 50vw;
+  max-height: 90vh;
+  background-color: #fff;
+  border-radius: 3%;
+  box-shadow: 1rem 1rem 1rem rgba(20, 1, 26, 0.37);
+  overflow: hidden;
+}
+
+.search-header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  height: 40vh;
+  padding: 2% 6%;
+  font-family: "Anton", sans-serif;
+  overflow: hidden;
+}
+.search-header__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(0.1rem);
+}
+.search-header__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(176, 243, 241, 0.56);
+}
+.search-header__title {
+  margin-bottom: 5%;
+  color: rgb(14, 70, 69);
+  font-size: 5vw;
+  letter-spacing: 1vw;
+  z-index: 1;
+}
+.search-header__input {
+  padding: 2% 4%;
+  margin-bottom: 4%;
+  width: 100%;
+  font-size: 1vw;
+  border-radius: 5vw;
+  border: 0.3vw solid rgb(37, 177, 157);
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 2;
+}
+.search-header__input::-moz-placeholder {
+  color: rgb(27, 112, 110);
+}
+.search-header__input:-ms-input-placeholder {
+  color: rgb(27, 112, 110);
+}
+.search-header__input::placeholder {
+  color: rgb(27, 112, 110);
+}
+
+.drink-list {
+  padding: 4% 8%;
+  height: 40vh;
+}
+.drink-list__title {
+  padding: 5% 0;
+  font-size: 1.5vw;
+}
+
+ul {
+  height: 50%;
+  padding: 0 3% 3% 0;
+  list-style: none;
+  overflow-y: scroll;
+  scrollbar-color: rgb(37, 177, 157) #e2e2e2;
+  scrollbar-width: thin;
+}
+ul::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+}
+ul::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  margin: 2px 0;
+}
+ul::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgb(37, 177, 157);
+}
+
+li {
+  padding: 1% 0;
+  font-size: 1vw;
+  border-bottom: 0.1vw solid rgb(236, 236, 236);
+}
+li:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 950px) {
+  .search-header {
+    height: 20vh;
+  }
+  .search-header__input {
+    font-size: 2vh;
+  }
+
+  .drink-list__title {
+    font-size: 2.3vh;
+  }
+
+  ul {
+    height: 75%;
+  }
+
+  li {
+    padding: 3% 0;
+    font-size: 2vh;
+  }
+}
+@media (max-width: 450px) {
+  .search-wrapper {
+    width: 70vw;
+  }
+
+  .search-header__title {
+    font-size: 3vh;
+  }
+  .search-header__input {
+    font-size: 1.5vh;
+  }
+
+  .drink-list {
+    height: 50vh;
+  }
+}/*# sourceMappingURL=style.css.map */
